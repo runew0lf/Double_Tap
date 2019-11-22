@@ -1,0 +1,7 @@
+<configs>
+
+    <!-- Increase birdnest spawn chance 2 times. -->
+	<set xpath="/worldgeneration/biomes/biome/subbiome/decorations/decoration[@blockname='cntBirdnest']/@prob">0.002</set>
+	<set xpath="/worldgeneration/biomes/biome/decorations/decoration[@blockname='cntBirdnest']/@prob">0.002</set>
+
+</configs>

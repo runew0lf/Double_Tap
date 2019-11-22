@@ -1,0 +1,83 @@
+<config>
+    <!-- New Recipes-->
+    <append xpath="/recipes">
+        <!-- Campfire Recipes !-->
+        <recipe name="resourceCoal" count="1" craft_area="campfire" craft_tool="toolCookingGrill">
+            <ingredient name="resourceWood" count="2"/>
+        </recipe>
+
+        <!-- Forge Recipes !-->
+        <recipe name="toolBeaker" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+            <ingredient name="unit_glass" count="20"/>
+        </recipe>
+
+        <!-- Workbench Recipes !-->
+        <recipe name="resourceMechanicalParts" count="1" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="resourceForgedIron" count="2"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceSewingKit" count="1" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="resourceForgedIron" count="1"/>
+            <ingredient name="resourceCropCottonPlant" count="3"/>
+        </recipe>
+
+        <recipe name="gunPistolParts" count="1" craft_area="workbench" tags="workbenchCrafting, perkGunslinger">
+            <ingredient name="resourceForgedIron" count="5"/>
+            <ingredient name="resourceGlue" count="5"/>
+            <ingredient name="resourceMechanicalParts" count="5"/>
+            <ingredient name="resourceSpring" count="2"/>
+        </recipe>
+
+        <recipe name="gunBowWoodenParts" count="1" craft_area="workbench" tags="workbenchCrafting, perkGunslinger">
+            <ingredient name="resourceForgedIron" count="5"/>
+            <ingredient name="resourceGlue" count="3"/>
+            <ingredient name="resourceMechanicalParts" count="5"/>
+            <ingredient name="resourceSpring" count="2"/>
+            <ingredient name="resourceSpring" count="2"/>  
+            <ingredient name="resourceWood" count="10"/>        
+        </recipe>
+
+        <recipe name="resourceBrokenGlass" count="1" material_based="true" craft_area="forge" craft_time="1" craft_exp_gain="0" always_unlocked="true" use_ingredient_modifier="false">
+            <ingredient name="unit_glass" count="5"/>
+        </recipe>
+
+    </append>
+
+    <!-- Recipe Fixes !-->
+    <!-- Food -->
+    <!-- Meat -->
+    <remove xpath="/recipes/recipe[@name='foodBoiledMeat']/effect_group/passive_effect" />
+    <set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+
+    <remove xpath="/recipes/recipe[@name='foodCharredMeat']/effect_group/passive_effect" />
+    <set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+
+    <remove xpath="/recipes/recipe[@name='foodGrilledMeat']/effect_group/passive_effect" />
+    <set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+
+    <remove xpath="/recipes/recipe[@name='foodBaconAndEggs']/effect_group/passive_effect" />
+    <set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']/@count">2</set>
+    <set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodEgg']/@count">1</set>
+
+    <remove xpath="/recipes/recipe[@name='foodChiliDog']/effect_group/passive_effect" />
+    <set xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']/@count">1</set>
+
+    <remove xpath="/recipes/recipe[@name='foodMeatStew']/effect_group/passive_effect" />
+    <set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">2</set>
+
+    <remove xpath="/recipes/recipe[@name='foodSteakAndPotato']/effect_group/passive_effect" />
+    <set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']/@count">1</set>
+
+    <!-- Bellows-->
+    <remove xpath="/recipes/recipe[@name='toolBellows']" />
+    <append xpath="/recipes">
+        <recipe name="toolBellows" count="1" craft_time="300" craft_area="workbench" tags="learnable,workbenchCrafting">
+            <ingredient name="resourceWood" count="6"/>
+            <ingredient name="resourceLeather" count="20"/>
+            <ingredient name="resourceMetalPipe" count="2"/>
+            <ingredient name="resourceDuctTape" count="5"/>
+            <ingredient name="resourceNail" count="5"/>
+        </recipe>    
+    </append>
+</config>

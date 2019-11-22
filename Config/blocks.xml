@@ -1,0 +1,30 @@
+<configs>
+    <!-- MORE RESOURCES FROM STONE -->
+    <append xpath="/blocks/block[@name='terrStone']">
+        <drop event="Harvest" name="resourceCoal" count="1" tag="oreWoodHarvest" />
+        <drop event="Harvest" name="resourceScrapBrass" count="1" tag="oreWoodHarvest" />
+        <drop event="Harvest" name="resourceScrapLead" count="1" tag="oreWoodHarvest" />
+        <drop event="Harvest" name="resourcePotassiumNitratePowder" count="1" tag="oreWoodHarvest" />
+        <drop event="Harvest" name="resourceOilShale" count="1" tag="oreWoodHarvest" />
+        <drop event="Harvest" name="resourceClayLump" count="4" tag="oreWoodHarvest" />
+        <drop event="Harvest" name="resourceScrapIron" count="4" tag="oreWoodHarvest" />
+    </append>
+
+    <!-- SPIKES CAN BE PICKED UP -->
+    <append xpath="/blocks/block[starts-with(@name,'trapSpikes')]">
+        <property name="CanPickup" value="true"/>
+        <property name="Weight" value="60"/>
+    </append>
+
+    <!-- SPIKES HARDER TO DESTROY -->
+    <!-- WOODEN SPIKES -->
+    <set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='Damage']/@value">50</set>
+    <set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='Damage_received']/@value">20</set>
+    <set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='MaxDamage']/@value">250</set>
+    <!-- IRON SPIKES -->
+    <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage']/@value">65</set>						
+    <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage_received']/@value">10</set>
+    <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='MaxDamage']/@value">350</set>
+			
+
+</configs>

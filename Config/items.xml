@@ -1,0 +1,20 @@
+<configs>
+    <!-- First, we remove food poisoning from all foods that aren't raw, moldy, rotten, or a crop. -->
+    <remove xpath="/items/item[starts-with(@name,'food') and not(contains(@name, 'Moldy')) and not(contains(@name, 'Raw')) and not(contains(@name, 'Crop')) and not(@name='foodEgg') and not(@name='foodShamSandwich')]/effect_group/triggered_effect[@cvar='.DiseaseRoll']" />
+    <remove xpath="/items/item[starts-with(@name,'food') and not(contains(@name, 'Moldy')) and not(contains(@name, 'Raw')) and not(contains(@name, 'Crop')) and not(@name='foodEgg') and not(@name='foodShamSandwich')]/effect_group//display_value[@name='dFoodPoisoningRisk']" />
+    <remove xpath="/items/item[starts-with(@name,'food') and not(contains(@name, 'Moldy')) and not(contains(@name, 'Raw')) and not(contains(@name, 'Crop')) and not(@name='foodEgg') and not(@name='foodShamSandwich')]/effect_group/triggered_effect[@buff='buffIllFoodPoisoning01']" />
+
+    <!-- Then we remove food poisoning from super corn and yucca fruit because they got filtered from the last few lines due to having "Crop" in the name. -->
+    <remove xpath="/items/item[@name='foodCropGraceCorn' or @name='foodCropYuccaFruit']/effect_group/triggered_effect[@cvar='.DiseaseRoll']" />
+    <remove xpath="/items/item[@name='foodCropGraceCorn' or @name='foodCropYuccaFruit']/effect_group/display_value[@name='dFoodPoisoningRisk']" />
+    <remove xpath="/items/item[@name='foodCropGraceCorn' or @name='foodCropYuccaFruit']/effect_group/triggered_effect[@buff='buffIllFoodPoisoning01']" />
+
+    <!-- Now we remove dysentery from boiled water. -->
+    <remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/triggered_effect[@cvar='.DiseaseRoll']" />
+    <remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/display_value[@name='dDysenteryRisk']" />
+    <remove xpath="/items/item[@name='drinkJarBoiledWater']/effect_group/triggered_effect[@buff='buffDysenteryCatch']" />
+
+    <!-- Zombies have shorter reach-->
+    <set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@value='1.65']/@value">1.2</set>
+
+</configs>

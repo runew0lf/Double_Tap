@@ -1,0 +1,4 @@
+<configs>
+    <!-- 2 Skillpoints per level instead of 1-->
+    <set xpath="/progression/level/@skill_points_per_level">2</set>
+</configs>
