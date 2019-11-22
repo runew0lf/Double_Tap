@@ -1,5 +1,5 @@
 ## Double-Tap
-Double-Tap gives you some quality of life fixes
+Double-Tap gives you some quality of life fixes!
 
  - Increase Birdnest Spawn by X2
  - Allows basic resources to be gathered from stone
