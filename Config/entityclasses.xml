@@ -1,4 +1,8 @@
 <configs>
+    <!-- Changes loot drops from .02 range to .50 -->
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[contains(@name, 'LootDropProb')]/@value">.10</set>
+
+
     <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='TimeStayAfterDeath']/@value">300</set>
     <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='DeadBodyHitPoints']/@value">350</set>
 

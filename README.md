@@ -2,6 +2,7 @@
 Double-Tap gives you some quality of life fixes!
 
  - Increase Birdnest Spawn by X2
+ - Increase zombie droprate to 10% instead of 2%
  - Allows basic resources to be gathered from stone
  - Spike traps are now tougher and can be picked up once placed 
  - Zombies are now harvestable again

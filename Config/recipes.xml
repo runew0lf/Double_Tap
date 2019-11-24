@@ -72,7 +72,7 @@
     <!-- Bellows-->
     <remove xpath="/recipes/recipe[@name='toolBellows']" />
     <append xpath="/recipes">
-        <recipe name="toolBellows" count="1" craft_time="300" craft_area="workbench" tags="learnable,workbenchCrafting">
+        <recipe name="toolBellows" count="1" craft_time="300" craft_area="workbench" tags="workbenchCrafting">
             <ingredient name="resourceWood" count="6"/>
             <ingredient name="resourceLeather" count="20"/>
             <ingredient name="resourceMetalPipe" count="2"/>
