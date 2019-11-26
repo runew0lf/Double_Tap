@@ -11,6 +11,10 @@
             <ingredient name="unit_glass" count="20"/>
         </recipe>
 
+        <recipe name="resourceSpring" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+            <ingredient name="resourceForgedIron" count="10"/>
+        </recipe>
+
         <recipe name="resourceBrokenGlass" count="1" material_based="true" craft_area="forge" craft_time="1" craft_exp_gain="0" always_unlocked="true" use_ingredient_modifier="false">
             <ingredient name="unit_glass" count="5"/>
         </recipe>
