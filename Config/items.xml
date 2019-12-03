@@ -17,4 +17,8 @@
     <!-- Zombies have shorter reach-->
     <set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@value='1.65']/@value">1.2</set>
 
+
+    <!-- Coal SHOULD burn for longer than Wood-->
+    <set xpath="/items/item[@name='resourceCoal']/property[@name='FuelValue']/@value">150</set>
+
 </configs>

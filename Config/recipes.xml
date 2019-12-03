@@ -103,6 +103,11 @@
 		<ingredient count="2" name="resourceForgedSteel"/>
 		</recipe>
 
+        <recipe tags="workbenchCrafting" count="1" name="barbedWireSheet" craft_area="workbench">
+            <ingredient name="resourceForgedIron" count="2"/>
+        </recipe>
+
+
     </append>
 
     <!-- Recipe Fixes !-->
