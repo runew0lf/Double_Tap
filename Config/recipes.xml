@@ -146,4 +146,12 @@
             <ingredient name="resourceNail" count="5"/>
         </recipe>    
     </append>
+
+    <!-- Working Barrel Grill-->
+	<append xpath="/recipes">
+		<recipe name="WorkingBarrelGrill" count="1" >
+			<ingredient name="resourceScrapIron" count="15"/>
+		</recipe>
+	</append>
+
 </config>

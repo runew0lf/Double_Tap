@@ -25,6 +25,62 @@
     <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage']/@value">65</set>						
     <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage_received']/@value">10</set>
     <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='MaxDamage']/@value">350</set>
+
+    <!-- Working Barrel Grill-->	
+	<append xpath="/blocks">
+
+		<block name="WorkingBarrelGrill">
+			<property name="Class" value="Campfire"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="100"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+            <property name="CustomIcon" value="burningBarrelPlayer"/>
+			<property name="Model" value="Entities/Lighting/barrel03_burning_playerPrefab"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="ParticleName" value="campfire"/>
+			<property name="ParticleOffset" value="0.5,0,0.5"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="HeatMapStrength" value="1"/>
+			<property name="HeatMapTime" value="1200"/>
+			<property name="HeatMapFrequency" value="25"/>
+			<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+			<property name="ActiveRadiusEffects" value="buffCampfireAOE(2)"/>
+
+			<property class="Workstation">
+				<property name="Modules" value="tools,output,fuel,input"/>
+				<property name="Collide" value="melee,bullet,arrow,rocket"/>
+				<property name="CraftingAreaRecipes" value="campfire"/> 
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_campfire" />
+			<property name="CraftActionName" value="lblContextActionCook" />
+			<property name="CraftIcon" value="ui_game_symbol_spatula" />
+			<property name="OpenSound" value="campfire_open" />
+			<property name="CloseSound" value="campfire_close" />
+			<property name="CraftSound" value="campfire_cook_click" />
+			<property name="CraftCompleteSound" value="campfire_complete_item" />
+			<property name="WorkstationJournalTip" value="campfireTip" />
+
+			<property class="RepairItems">
+				<property name="resourceScrapIron" value="3"/>
+			</property>
 			
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceScrapIron" count="4,8" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="2,4" prob="1"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			
+			<property name="Group" value="Food/Cooking,Basics,Building"/>
+			<property name="DescriptionKey" value="campfireDesc"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+
+	</append>    
 
 </configs>

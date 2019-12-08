@@ -8,4 +8,6 @@
 	<set xpath="/entitygroups/entitygroup[contains(@name, '')]/entity[@name='animalZombieVulture']/@name">zombieSpider</set>	
 	<set xpath="/entitygroups/entitygroup[contains(@name, '')]/entity[@name='animalZombieVultureRadiated']/@name">zombieSpiderFeral</set>
 
+    <set xpath="/entitygroups/entitygroup[contains(@name, '')]/entity[@name='zombieDemolition']/@prob">0.01</set>
+
 </configs>
